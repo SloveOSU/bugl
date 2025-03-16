@@ -1,0 +1,15 @@
+# npm install --same-dev prettier@3.1.0 \
+# eslint@8.54.0 \
+# eslint-plugin-react@7.33.2 \
+# eslint-config-prettier@9.0.0 \
+# eslint-plugin-jsx-a11y@6.8.0
+
+# npm install --same-dev husky@8.0.3 \
+# lint-staged@15.1.0
+
+
+# npm install --same-dev @commitlint/cli@18.4.3 \
+#     @commitlint/config-conventional@18.4.3
+
+# npx husky add .husky/commit-msg \ 
+#     'npx commitlint --edit ${1}'
