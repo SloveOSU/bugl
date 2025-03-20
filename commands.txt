@@ -1,0 +1,51 @@
+=============================
+=                           =
+=   Commands for Chapter 2  =
+=                           =
+=============================
+
+
+
+docker run -i -t ubuntu:24.04 /bin/bash
+
+-i = keeps STDIN open
+-t = allocates a new TTY
+
+
+docker: Error response from daemon: failed to create task for container: 
+failed to create shim task: OCI runtime create failed: runc create 
+failed: unable to start container process: error during container 
+init: exec: "C:/Program Files/Git/usr/bin/bash": 
+stat C:/Program Files/Git/usr/bin/bash: no such file or directory: unknown
+
+
+
+// not working
+docker run -i -t ubuntu /bin/bash
+
+// working
+docker run -it ubuntu bash
+
+
+//
+// Mongo DB
+// 1. step one start docker MongoDB image
+// 2. step two open connection to MongoDB through extension or MongoSH
+
+
+
+// mongo db
+docker run -d --name dbserver -p 27017:27017 --restart unless-stopped mongo:6.0.4
+
+-d          = Runs the container in the background (daemon mode).
+--name      = Specifies a name for the container. In our case, we named it dbserver.
+-p          = Maps a port from the container to the host. In our case, we map the default MongoDB
+                server port 27017 in the container to the same port on our host. 
+
+--restart unless-stopped = Makes sure to automatically start (and restart) the
+                container unless we manually stop it. This ensures that every time we start Docker, our
+                MongoDB server will already be running
+
+
+// connect to MongoDB server
+mongosh mongodb://localhost:27017/ch2
