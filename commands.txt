@@ -49,3 +49,6 @@ docker run -d --name dbserver -p 27017:27017 --restart unless-stopped mongo:6.0.
 
 // connect to MongoDB server
 mongosh mongodb://localhost:27017/ch2
+
+// Commitlint must use one of these types
+// [build, chore, ci, docs, feat, fix, perf, refactor, revert, style, test]
