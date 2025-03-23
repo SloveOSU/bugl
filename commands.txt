@@ -52,3 +52,28 @@ mongosh mongodb://localhost:27017/ch2
 
 // Commitlint must use one of these types
 // [build, chore, ci, docs, feat, fix, perf, refactor, revert, style, test]
+
+
+git status
+git branch -m <current_banch> <new_branch>
+
+
+
+
+=============================
+=                           =
+=   Commands for Chapter 3  =
+=                           =
+=============================
+
+
+npm uninstall --save react react-dom
+npm uninstall --save-dev vit @types/react @types/react-dom @vitejs/plugin-react eslint-plugin-jsx eslint-plugin-react
+
+npm install mongoose@8.0.2
+
+// jest
+npm install --save-dev jest@29.7.0 mongodb-memory-server@9.1.1
+
+// run testsuit with ESM
+NODE_OPTIONS="$NODE_OPTIONS --experimental-vm-modules" npx jest
